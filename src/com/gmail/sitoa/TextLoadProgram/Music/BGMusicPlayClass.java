@@ -25,7 +25,7 @@ public class BGMusicPlayClass implements LineListener {
 
             BGM.open(audioInputStream);
             BGM.setFramePosition(0);
-            BGM.loop(1000);
+            BGM.loop(BGM.LOOP_CONTINUOUSLY);
             audioInputStream.close();
         } catch (UnsupportedAudioFileException e) {
             e.printStackTrace();

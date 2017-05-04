@@ -28,6 +28,7 @@ public boolean propertiesload() {
         File propertyfile = new File("properties/textlist.properties");
         InputStreamReader isr = new InputStreamReader(new FileInputStream(propertyfile), "UTF-8");
         BufferedReader reader = new BufferedReader(isr);
+        System.out.println(System.getProperty("file.encording"));
 
         property.load(reader);
 

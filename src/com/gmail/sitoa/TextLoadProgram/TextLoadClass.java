@@ -1,8 +1,6 @@
 package com.gmail.sitoa.TextLoadProgram;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -40,7 +38,8 @@ public class TextLoadClass {
         usedFile = FLM.getnowFile();
         lines.clear();
         try {
-            FileReader filereader = new FileReader(usedFile);
+
+            InputStreamReader filereader = new InputStreamReader(new FileInputStream(usedFile), "UTF-8");
 
             BufferedReader br = new BufferedReader(filereader);
             String str = "";

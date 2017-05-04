@@ -35,19 +35,33 @@ public class CommandmatchClass {
 
 
     public String getCmd() {
-        System.out.println(cmd);
+        System.out.println("CMD:"+cmd);
         //コマンド部分が人以外の時
-        if (cmd.equalsIgnoreCase("Font")) {
+
+        if (cmd.equalsIgnoreCase("BGMFade")) {
+            BGMusicManager BGMManager = BGMusicManager.getInstance();
+            BGMManager.BGMFade();
+
+            return "BGMFade";
+        }else if (cmd.equalsIgnoreCase("BGMRE")) {
+            BGMusicManager BGMManager = BGMusicManager.getInstance();
+            BGMManager.BGMRE();
+
+            return "BGMRE";
+        }else if (cmd.equalsIgnoreCase("BGMPAUSE")) {
+            BGMusicManager BGMManager = BGMusicManager.getInstance();
+            BGMManager.BGMPause();
+
+            return "BGMPAUSE";
+        }else if (cmd.equalsIgnoreCase("Font")) {
 
 
-            return line;
-        }else
-        if (cmd.equalsIgnoreCase("BLACKOUT")) {
+            return "Font";
+        }else if (cmd.equalsIgnoreCase("BLACKOUT")) {
 
 
             return "Blackout";
-        }else
-        if (cmd.equalsIgnoreCase("BGMSTOP")) {
+        }else if (cmd.equalsIgnoreCase("BGMSTOP")) {
 
             BGMusicManager BGMManager = BGMusicManager.getInstance();
             BGMManager.BGMStop();
